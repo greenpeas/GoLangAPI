@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+
+  web:
+    image: creg.kvant.online/seal/main-api:latest
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - /configs/seal-api/app.yml:/configs/app.yml
+      - shipping_files:/shipping_files
+      - logs:/logs
+
+networks:
+  default:
+    external: false
+    name: seal-network
+
+volumes:
+    shipping_files:
+    logs:
+      external: true

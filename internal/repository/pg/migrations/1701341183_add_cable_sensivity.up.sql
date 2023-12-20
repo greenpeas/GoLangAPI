@@ -1,0 +1,2 @@
+ALTER TABLE public.seals_data ADD sensitivity_cable int2 NOT NULL DEFAULT 0;
+COMMENT ON COLUMN public.seals_data.sensitivity_cable IS 'Диапазон чувствительности троса (0 – Низкая, 1 – Средняя, 2 – Высокая)';

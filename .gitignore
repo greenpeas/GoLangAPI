@@ -1,0 +1,15 @@
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+*.test
+
+*.out
+
+.idea/*
+runtime
+build
+configs/app.yml
+*.log

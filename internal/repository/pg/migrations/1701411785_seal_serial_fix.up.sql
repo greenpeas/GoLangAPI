@@ -1,0 +1,1 @@
+ALTER TABLE public.seals ALTER COLUMN serial TYPE int8 USING serial::int8;

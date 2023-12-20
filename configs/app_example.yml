@@ -1,0 +1,34 @@
+# Database credentials
+database:
+  psql:
+    dsn: "postgres://seal:jw_811-s0F4@192.168.158.191/seal"
+    migration_path: "internal/repository/pg/migrations"
+  redis:
+    addr: "localhost:6379"
+    password: ""
+    db:       0
+jwt:
+  secret: "secret"
+  ttl: 36000
+  ttl_refresh: 360000
+salt: "secret"
+logger:
+  file_path:   "logs/app.log"
+  level:       "info" #fatal error warn info debug
+  max_size:    10 #megabytes
+  max_backups: 5
+  max_age:     28 #days
+  compress:    true
+router:
+  use_cors_middleware: true
+  port: 8080
+grpc_commands:
+  addr: "commandos-web-1:8082"
+  timeout: 2 # seconds 0-255
+test:
+  user:
+    login: "anton"
+    password: "qwerty"
+shutdown_timeout: "5s"
+shipping_files_path: "/shipping_files"
+run_check_telemetry: true
